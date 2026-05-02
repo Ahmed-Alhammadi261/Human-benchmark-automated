@@ -15,7 +15,7 @@ y2 - y1 = height
 
 and input them into the following object 
 
-        Rectangle captureArea = new Rectangle(x1, y1, width, hieght);  
+        Rectangle captureArea = new Rectangle(x1, y1, width, height);  
         
 on my device it 
 
