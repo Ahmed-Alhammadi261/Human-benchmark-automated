@@ -4,13 +4,13 @@ this programs aims to automate the various tests/games that the website known as
 as of right now the program almost certainly won't work on different machines due to me using .awt.robot package and hard coding the pixels into it. This will be fixed on a later date.
 
 
-the file "tempo.java" has a single purpose and it is to allow me to get the exact pixel(s) I need and color(s) I need. you can use it to get the pixel you want to click and set it in ReactionTime.java. You can also use tempo.java to get the dimensions needed for AimTrainer.java to work on your machine. simply take the top left corner of your desired frame and take the bottom right corner.  then you take the x and y of your left corner lets say they are x1 and y1 while the bottom right corner's x and y are x2 and y2 respectfully. Simply perform 
+the file "DevTool.java" has a single purpose and it is to allow me to get the exact pixel(s) I need and color(s) I need. you can use it to get the pixel you want to click and set it in ReactionTime.java. You can also use tempo.java to get the dimensions needed for AimTrainer.java to work on your machine. simply take the top left corner of your desired frame and take the bottom right corner.  then you take the x and y of your left corner lets say they are x1 and y1 while the bottom right corner's x and y are x2 and y2 respectfully. Simply perform 
 
-x2 - x1 = width
+```x2 - x1 = width```
 
 and 
 
-y2 - y1 = height 
+```y2 - y1 = height```
 
 
 and input them into the following object 
