@@ -15,7 +15,7 @@ public class AimTrainer {
         boolean isDone = false;
 
         Rectangle captureArea = new Rectangle(794, 134, 1016, 583);
-        BufferedImage playArea = screenCapture.createScreenCapture(captureArea);
+        BufferedImage playArea;
 
         Color targetColor = new Color(230, 232, 244);
         Color targetColorTrans = new Color(149, 195,232);
@@ -34,22 +34,18 @@ public class AimTrainer {
 
                     if (pixelColor.equals(endColor)) {
                         isDone = true;
-                        try {
-                            Thread.sleep(10);
-                        } catch (Exception e) {
-                            return;
-                        }
+                        break search;
                     }
 
                     if (pixelColor.equals(targetColor) || pixelColor.equals(targetColorTrans)) {
-                        MoveMouse.moveMouse(captureArea.x + i, captureArea.y + j);
-                        LeftClick.mouseLeftClick();
+                        MoveMouse.moveMouse(screenCapture ,captureArea.x + i, captureArea.y + j);
+                        LeftClick.mouseLeftClick(screenCapture);
 
                         break search;
                     }
-                    j += 5;
+                    j += 25;
                 }
-                i += 5;
+                i += 25;
             }
         }
     }

@@ -2,17 +2,9 @@ import java.awt.*;
 import java.awt.event.InputEvent;
 
 public class LeftClick {
-    public static void mouseLeftClick() {
+    public static void mouseLeftClick(Robot mouse) {
 
-        Robot leftClick;
-
-        try {
-            leftClick = new Robot();
-        } catch (AWTException e) {
-            return;
-        }
-
-        leftClick.mousePress(InputEvent.BUTTON1_DOWN_MASK);
-        leftClick.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+        mouse.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+        mouse.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
     }
 }

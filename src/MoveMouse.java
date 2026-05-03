@@ -1,17 +1,9 @@
 import java.awt.*;
 
 public class MoveMouse {
-    public static void moveMouse(int POSX, int POSY) {
+    public static void moveMouse(Robot mouse ,int POSX, int POSY) {
 
-        Robot mouseMoveTo;
-
-        try {
-            mouseMoveTo = new Robot();
-        } catch (AWTException e) {
-            return;
-        }
-
-        mouseMoveTo.mouseMove(POSX, POSY);
+        mouse.mouseMove(POSX, POSY);
 
     }
 }
