@@ -2,7 +2,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 
 public class AimTrainer {
-    public static void AimTrainerCheat() {
+    public static void start() {
 
         Robot screenCapture;
         try {
@@ -38,8 +38,8 @@ public class AimTrainer {
                     }
 
                     if (pixelColor.equals(targetColor) || pixelColor.equals(targetColorTrans)) {
-                        MoveMouse.moveMouse(screenCapture ,captureArea.x + i, captureArea.y + j);
-                        LeftClick.mouseLeftClick(screenCapture);
+                        MoveMouse.move(screenCapture ,captureArea.x + i, captureArea.y + j);
+                        LeftClick.click(screenCapture);
 
                         break search;
                     }
