@@ -1,7 +1,7 @@
 import java.awt.*;
 
 public class ReactionTime {
-    public static void reactionTime() {
+    public static void start() {
         final int POSX = 2000;
         final int POSY = 500;
         Robot mouseBot;
@@ -13,7 +13,7 @@ public class ReactionTime {
         }
 
         mouseBot.mouseMove(POSX, POSY);
-        LeftClick.mouseLeftClick(mouseBot);
+        LeftClick.click(mouseBot);
 
         Color targetColor = new Color(75, 219, 106);
         Color pixelColor;
@@ -24,7 +24,7 @@ public class ReactionTime {
             pixelColor = mouseBot.getPixelColor(POSX, POSY);
 
             if (pixelColor.equals(targetColor)) {
-                LeftClick.mouseLeftClick(mouseBot);
+                LeftClick.click(mouseBot);
 
                 isDone = true;
             }
