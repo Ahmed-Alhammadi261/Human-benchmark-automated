@@ -38,8 +38,8 @@ public class AimTrainer {
                     }
 
                     if (pixelColor.equals(targetColor) || pixelColor.equals(targetColorTrans)) {
-                        MoveMouse.move(screenCapture ,captureArea.x + i, captureArea.y + j);
-                        LeftClick.click(screenCapture);
+                        MouseControler.move(screenCapture ,captureArea.x + i, captureArea.y + j);
+                        MouseControler.click(screenCapture);
 
                         break search;
                     }
