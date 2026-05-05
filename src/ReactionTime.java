@@ -12,8 +12,8 @@ public class ReactionTime {
             return;
         }
 
-        MouseControler.move(mouseBot, POSX, POSY);
-        MouseControler.click(mouseBot);
+        MouseController.move(mouseBot, POSX, POSY);
+        MouseController.click(mouseBot);
 
         Color targetColor = new Color(75, 219, 106);
         Color pixelColor;
@@ -24,7 +24,7 @@ public class ReactionTime {
             pixelColor = mouseBot.getPixelColor(POSX, POSY);
 
             if (pixelColor.equals(targetColor)) {
-                MouseControler.click(mouseBot);
+                MouseController.click(mouseBot);
 
                 isDone = true;
             }
